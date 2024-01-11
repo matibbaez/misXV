@@ -526,7 +526,7 @@ mark,
 }
 
 .img-fluid {
-  max-width: 96%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -655,7 +655,7 @@ pre code {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 15px;
+  padding-right: 30px;
   padding-left: 15px;
 }
 
