@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var phoneNumber = "+541153464411";
         
         // Mensaje
-        var message = "¡Hola! Confirmo mi asistencia para Mis XV el 09/03/2024 a las 21:00 hs.";
+        var message = "¡Hola! Confirmo mi asistencia para Mis XV el 09/03/2024 a las 21:30 hs.";
 
         // Crear el enlace de WhatsApp con el número y el mensaje
         var whatsappLink = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
