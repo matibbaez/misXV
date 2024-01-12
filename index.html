@@ -97,7 +97,7 @@
                 <div class="col-md-6 p-0 text-center text-md-right">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
                         <h3 class="mb-3">09/03/2024</h3>
-                        <p>21:00 hs<br>Confirma tu asistencia aquí.</p>
+                        <p>21:30 hs<br>Confirma tu asistencia aquí.</p>
                         <ul class="list-inline mb-4" id="portfolio-flters">
                             <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".first">Confirmar</li>
                         </ul>
@@ -117,7 +117,7 @@
         <div class="container pt-5 pb-3">
             <div class="section-title position-relative text-center">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Mis 15 años</h6>
-                <h1 class="font-secondary display-4">¿Qué tenes que saber?</h1>
+                <h1 class="font-secondary display-4">¿Qué tenés que saber?</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="container timeline position-relative p-0">
@@ -146,18 +146,40 @@
                             <h4 class="mb-2">Dress Code</h4>
                             <p class="mb-2">Tips e información de como ir vestido.</p>
                             <ul class="list-inline mb-4" id="portfolio-flters">
-                                <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".first">Saber más</li>
+                                <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4 dress-code-btn" data-filter=".first">Saber más</li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="dressCodeModal" tabindex="-1" role="dialog" aria-labelledby="dressCodeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="dressCodeModalLabel">Dress Code</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <p>Elegante. <br>Por favor, evitá el color azul, reservado para la mesa principal. ¡Gracias!</p>
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeModalBtn">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="row">
                     <div class="col-md-6 text-center text-md-right">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
                             <h4 class="mb-2">Regalos</h4>
                             <p class="mb-2">Si deseas regalarme algo más que tu presencia...</p>
                             <ul class="list-inline mb-4" id="portfolio-flters">
-                                <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".first">Saber más</li>
+                                <li id="openGiftsModalBtn" class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-toggle="modal" data-target="#giftsModal">Saber más</li>
                             </ul>
                         </div>
                     </div>
@@ -165,6 +187,28 @@
                         <img class="img-fluid ml-md-3" src="img/mica6.jpg" alt="">
                     </div>
                 </div>
+
+                <!-- Modal para Regalos -->
+                <div class="modal fade" id="giftsModal" tabindex="-1" role="dialog" aria-labelledby="giftsModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="giftsModalLabel">Regalos</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <p>ALIAS: <span>micaela.xv</span><br>
+                                CBU: 0720039788000037838054</p>
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeGiftsModalBtn">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -274,7 +318,7 @@
                 <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
                 <a class="btn btn-lg btn-outline-light btn-lg-square" href="https://instagram.com/micabaez__"><i class="fab fa-instagram"></i></a>
             </div>
-            <p class="m-0">Designed by <a class="text-primary" href="https://new-portfolio-lilac.vercel.app/">Matias Baez</a>
+            <p class="m-0 p1">Designed by <a class="text-primary" href="https://new-portfolio-lilac.vercel.app/">Matias Baez</a>
             </p>
         </div>
     </div>
@@ -300,6 +344,38 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="js/confirm.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Al hacer clic en el botón "Saber más"
+            $(".dress-code-btn").click(function () {
+                // Mostrar el modal
+                $("#dressCodeModal").modal("show");
+            });
+    
+            // Al hacer clic en el botón de cerrar dentro del modal
+            $("#closeModalBtn").click(function () {
+                // Cerrar el modal
+                $("#dressCodeModal").modal("hide");
+            });
+        });
+
+        $(document).ready(function () {
+            // Al hacer clic en el botón "Saber más" en la sección de Regalos
+            $("#openGiftsModalBtn").click(function () {
+                // Mostrar el modal de Regalos
+                $("#giftsModal").modal("show");
+            });
+
+            // Al hacer clic en el botón de cerrar dentro del modal de Regalos
+            $("#closeGiftsModalBtn").click(function () {
+                // Cerrar el modal de Regalos
+                $("#giftsModal").modal("hide");
+            });
+        }  );
+
+    </script>
+
 </body>
 
 </html>

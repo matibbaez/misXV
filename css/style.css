@@ -111,7 +111,9 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
+  color: black;
+  opacity: 0.8;
 }
 
 abbr[title],
@@ -211,8 +213,7 @@ samp {
 }
 
 pre {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  
   overflow: auto;
   -ms-overflow-style: scrollbar;
 }
@@ -2433,15 +2434,19 @@ fieldset:disabled a.btn {
 }
 
 .btn-secondary {
-  color: #212529;
+  color: #EA4CD1;
   background-color: #EDF5F7;
-  border-color: #EDF5F7;
+  border-color: #EA4CD1;
 }
 
 .btn-secondary:hover {
-  color: #212529;
-  background-color: #d3e6eb;
-  border-color: #cae1e7;
+  color: #fff;
+  background-color: #EA4CD1;
+  border-color: #EA4CD1;
+}
+
+.p1{
+  color: #fff;
 }
 
 .btn-secondary:focus, .btn-secondary.focus {
@@ -5491,8 +5496,6 @@ a.close.disabled {
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  outline: 0;
 }
 
 .modal-backdrop {
@@ -9304,7 +9307,7 @@ button.bg-dark:focus {
 }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #af5617 !important;
+  color: #EA4CD1 !important;
 }
 
 .text-secondary {
