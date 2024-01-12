@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Función para abrir WhatsApp con el número y el mensaje
     function openWhatsApp() {
         // Número de teléfono
-        var phoneNumber = "+541153464411";
+        var phoneNumber = "+541125990711";
         
         // Mensaje
         var message = "¡Hola! Confirmo mi asistencia para Mis XV el 09/03/2024 a las 21:30 hs.";
