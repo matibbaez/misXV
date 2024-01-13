@@ -53,6 +53,26 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
+
+@media (min-width: 992px) {
+  .carousel-item img {
+      max-width: 100%; /* Puedes ajustar el porcentaje según tus necesidades */
+      height: 50px;
+  }
+}
+
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center 32%; /* Ajusta este valor según tus necesidades */
+}
+
+
+
+
+
 /* Firefox */
 * {
   scrollbar-width: thin;
