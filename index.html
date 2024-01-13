@@ -85,7 +85,7 @@
     </div>
     <!-- Carousel End -->
 
-    <!-- About Start -->
+    <!-- Day Start -->
     <div class="container-fluid py-5" id="about">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
@@ -109,10 +109,10 @@
             </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- Day End -->
 
 
-    <!-- Story Start -->
+    <!-- About Start -->
     <div class="container-fluid py-5" id="story">
         <div class="container pt-5 pb-3">
             <div class="section-title position-relative text-center">
@@ -212,7 +212,7 @@
             </div>
         </div>
     </div>
-    <!-- Story End -->
+    <!-- About End -->
 
 
     <!-- Gallery Start -->
@@ -257,7 +257,7 @@
     </div>
     <!-- Gallery End -->
 
-    <!-- RSVP Start -->
+    <!-- Questions Start -->
     <div class="container-fluid py-5" id="rsvp">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
@@ -268,34 +268,34 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="text-center">
-                        <form>
+                        <form id="miFormulario">
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Tu nombre"/>
+                                    <input type="text" id="nombre" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Tu nombre" required/>
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <input type="email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Tu Email" required="required"/>
+                                    <input type="email" id="email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Tu Email" required/>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;" placeholder="Tu Email"/>
+                                    <select id="relacion" class="form-control bg-secondary border-0" style="height: 52px;">
                                         <option>Familiar</option>
                                         <option>Amigo / Conocido</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;">
+                                    <select id="tipoConsulta" class="form-control bg-secondary border-0" style="height: 52px;">
                                         <option>Consulta</option>
                                         <option>Idea</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Mensaje" required="required"></textarea>
+                                <textarea id="mensaje" class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Mensaje" required></textarea>
                             </div>
                             <div>
-                                <button class="btn btn-primary2 font-weight-bold py-3 px-5" type="submit">Enviar</button>
+                                <button class="btn btn-primary2 font-weight-bold py-3 px-5" onclick="enviarFormulario()">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -303,7 +303,7 @@
             </div>
         </div>
     </div>
-    <!-- RSVP End -->
+    <!-- Questions End -->
 
 
     <!-- Footer Start -->
